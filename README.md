@@ -12,8 +12,6 @@
 <img src="ScreenShot/IMG-20240829-WA0019.jpg" width="200">
 <img src="ScreenShot/IMG-20240829-WA0020.jpg" width="200">
 <img src="ScreenShot/IMG-20240829-WA0021.jpg" width="200">
-<img src="ScreenShot/IMG-20240829-WA0022.jpg" width="200">
-<img src="ScreenShot/IMG-20240829-WA0023.jpg" width="200">
 </div>
 <br>
 <div style="display:flex;">
