@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.vanshika.tasktrack.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.vanshika.tasktrack.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.vanshika.tasktrack.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.vanshika.tasktrack.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskAdditionFragment"
+        android:name="com.vanshika.tasktrack.TaskAdditionFragment"
+        android:label="fragment_task_addition"
+        tools:layout="@layout/fragment_task_addition" >
+        <action
+            android:id="@+id/action_taskAdditionFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskUpdationFragment"
+        android:name="com.vanshika.tasktrack.TaskUpdationFragment"
+        android:label="fragment_task_updation"
+        tools:layout="@layout/fragment_task_updation" >
+        <action
+            android:id="@+id/action_taskUpdationFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="com.vanshika.tasktrack.ProgressFragment"
+        android:label="fragment_progress"
+        tools:layout="@layout/fragment_progress" />
+    <fragment
+        android:id="@+id/rewardsFragment"
+        android:name="com.vanshika.tasktrack.RewardsFragment"
+        android:label="fragment_rewards"
+        tools:layout="@layout/fragment_rewards" />
+    <fragment
+        android:id="@+id/rewardAddedFragment"
+        android:name="com.vanshika.tasktrack.RewardAddedFragment"
+        android:label="fragment_reward_added"
+        tools:layout="@layout/fragment_reward_added" />
+</navigation>

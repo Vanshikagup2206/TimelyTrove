@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10"
+    tools:context=".TaskAdditionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomHighBold"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/create_task"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomMedium"
+            android:padding="@dimen/dp_10"
+            android:text="@string/task_title"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey"
+            app:cardCornerRadius="@dimen/dp_10">
+
+            <EditText
+                android:id="@+id/etEnterTaskTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CustomLow"
+                android:background="@null"
+                android:hint="@string/enter_task_title"
+                android:padding="@dimen/dp_10"
+                android:textSize="@dimen/sp_20" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomMedium"
+            android:padding="@dimen/dp_10"
+            android:text="@string/category"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            app:cardCornerRadius="@dimen/dp_10">
+
+            <Spinner
+                android:id="@+id/spCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CustomLow"
+                android:entries="@array/category"
+                android:padding="@dimen/dp_10" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/llAddCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_2"
+                android:src="@drawable/baseline_add_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/CustomMedium"
+                android:text="@string/add_new_categories"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomMedium"
+            android:padding="@dimen/dp_10"
+            android:text="@string/date"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey"
+            app:cardCornerRadius="@dimen/dp_10">
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CustomLow"
+                android:background="@null"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/enter_date"
+                android:inputType="none"
+                android:padding="@dimen/dp_10" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl_v_50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomMedium"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/starts"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomMedium"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/ends"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/gl_v_50"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/time_gl_v_50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".5" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey"
+                    app:cardCornerRadius="@dimen/dp_10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/etStarts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomLow"
+                        android:background="@null"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="@string/enter_time"
+                        android:inputType="none"
+                        android:padding="@dimen/dp_10" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey"
+                    app:cardCornerRadius="@dimen/dp_10"
+                    app:layout_constraintStart_toStartOf="@id/time_gl_v_50"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/etEnds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomLow"
+                        android:background="@null"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="@string/enter_time"
+                        android:inputType="none"
+                        android:padding="@dimen/dp_10" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomMedium"
+            android:padding="@dimen/dp_10"
+            android:text="@string/description"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey"
+            app:cardCornerRadius="@dimen/dp_10">
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CustomLow"
+                android:background="@null"
+                android:gravity="top|start"
+                android:hint="@string/description"
+                android:minLines="5"
+                android:padding="@dimen/dp_10"
+                android:textSize="@dimen/sp_20" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomMedium"
+            android:padding="@dimen/dp_10"
+            android:text="@string/sub_tasks"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey"
+            app:cardCornerRadius="@dimen/dp_10">
+
+            <EditText
+                android:id="@+id/etSubTasks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CustomLow"
+                android:background="@null"
+                android:hint="@string/sub_tasks"
+                android:padding="@dimen/dp_10"
+                android:textSize="@dimen/sp_20" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomMedium"
+            android:padding="@dimen/dp_10"
+            android:text="@string/select_color_for_tasklist_background"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/rbGreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/CustomLow"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/green"
+                    android:background="@drawable/bg_radio"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/dp_10"
+                    android:layout_margin="@dimen/dp_5" />
+
+                <RadioButton
+                    android:id="@+id/rbRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/CustomLow"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/purple"
+                    android:background="@drawable/bg_red"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/dp_10"
+                    android:layout_margin="@dimen/dp_5" />
+
+                <RadioButton
+                    android:id="@+id/rbOrange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/CustomLow"
+                    android:padding="@dimen/dp_10"
+                    android:background="@drawable/bg_orange"
+                    android:text="@string/pink"
+                    android:textStyle="bold"
+
+                    app:cornerRadius="@dimen/dp_10"
+                    android:layout_margin="@dimen/dp_5" />
+
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/btnAdd"
+            style="@style/CustomMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/add"
+            android:textSize="@dimen/sp_20" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvTask"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_5"
+    android:layout_marginTop="@dimen/dp_5"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/dp_30">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_5">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomHighBold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/cbTask"/>
+
+        <TextView
+            android:id="@+id/tvTasks"
+            style="@style/CustomHighBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/tasks"
+            android:textSize="@dimen/sp_20"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvCategory"
+            style="@style/CustomMedium"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/category"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTaskDescription"
+            style="@style/CustomLow"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textSize="@dimen/sp_20" />
+
+        <TextView
+            android:id="@+id/tvSubTasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            style="@style/CustomMedium"
+            android:gravity="center"
+            android:text="@string/sub_tasks"
+            android:textSize="@dimen/sp_20" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            style="@style/CustomLow"
+            android:text="@string/date"
+            android:textSize="@dimen/sp_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvStart"
+                style="@style/CustomLow"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/starts"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/CustomLow"
+                android:text="@string/separation"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:id="@+id/tvEnds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                style="@style/CustomLow"
+                android:text="@string/ends"
+                android:textSize="@dimen/sp_20" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ibUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/baseline_border_color_24" />
+
+            <ImageView
+                android:id="@+id/ibDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/baseline_delete_24" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

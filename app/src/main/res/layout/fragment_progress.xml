@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProgressFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+       <!-- TODO: Update blank fragment layout -->
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/day"
+           android:id="@+id/btnDay"
+           android:textSize="@dimen/sp_15"
+           android:layout_marginHorizontal="@dimen/dp_5"
+           style="@style/CustomHighBold"/>
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/weekly"
+           android:id="@+id/btnWeekly"
+           android:layout_marginEnd="@dimen/dp_5"
+           android:textSize="@dimen/sp_15"
+           style="@style/CustomHighBold"/>
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/monthly"
+           android:id="@+id/btnMonthly"
+           android:textSize="@dimen/sp_15"
+           style="@style/CustomHighBold"/>
+   </LinearLayout>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+</LinearLayout>

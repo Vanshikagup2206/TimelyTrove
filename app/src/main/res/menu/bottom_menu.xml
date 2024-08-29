@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/tasks"
+        android:id="@+id/navTasks"
+        android:icon="@drawable/baseline_add_task_24"/>
+    <item android:title="@string/calendar"
+        android:id="@+id/navCalendar"
+        android:icon="@drawable/baseline_calendar_month_24"/>
+    <item android:id="@+id/navProgress"
+        android:title="@string/progress"
+        android:icon="@drawable/baseline_stacked_line_chart_24"/>
+    <item android:title="@string/profile"
+        android:id="@+id/navProfile"
+        android:icon="@drawable/baseline_person_24"/>
+</menu>

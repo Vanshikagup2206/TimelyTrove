@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+        android:id="@+id/calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:layout_constraintTop_toTopOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:range_color="@color/lightBlue"
+        custom:selected_date_circle_color="@color/selected_date_circle_color"
+        custom:title_color="@color/black">
+    </com.archit.calendardaterangepicker.customviews.DateRangeCalendarView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

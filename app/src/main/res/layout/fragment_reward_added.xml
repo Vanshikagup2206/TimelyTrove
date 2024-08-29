@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".RewardAddedFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CustomHighBold"
+        android:padding="@dimen/dp_10"
+        android:text="@string/reward_added"
+        android:textSize="@dimen/sp_20"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/tvTaskAdded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTaskAdded"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:id="@+id/lottie_done"
+        app:lottie_rawRes="@raw/rewarded" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/complete_your_tasks_and_get_rewarded"
+        android:textSize="@dimen/sp_20"
+        style="@style/CustomMedium"
+        android:padding="@dimen/dp_5"
+        android:id="@+id/tvAddTasks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottie_done"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomMedium"
+        android:text="@string/press_continue"
+        android:id="@+id/btnDone"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddTasks"
+        android:textSize="@dimen/sp_20"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

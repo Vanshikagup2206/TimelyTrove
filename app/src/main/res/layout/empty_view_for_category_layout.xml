@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/gl_h_60"
+        app:layout_constraintGuide_percent=".6"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/emptycategory"
+        android:id="@+id/ivEmpty"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_h_60"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_category_found"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold"
+        style="@style/CustomMedium"
+        android:id="@+id/tvNoTask"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/gl_h_60" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_category_by_clicking_plus"
+        android:textSize="@dimen/sp_20"
+        android:gravity="center"
+        style="@style/CustomLow"
+        android:id="@+id/tvText"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoTask"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="today">#4b82ff</color>
+	<color name="greyed_out">#c7c7c7</color>
+	<color name="cblack">#000</color>
+	<color name="cwhite">#fff</color>
+	<color name="summer">#44eebd82</color>
+	<color name="fall">#44d8d27e</color>
+	<color name="winter">#44a1c1da</color>
+	<color name="spring">#448da64b</color>
+    <color name="green">#8BC34A</color>
+</resources>

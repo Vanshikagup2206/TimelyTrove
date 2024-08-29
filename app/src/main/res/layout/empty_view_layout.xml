@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/empty"
+        android:id="@+id/ivEmpty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvNoTask"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_task_to_do"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold"
+        style="@style/CustomMedium"
+        android:id="@+id/tvNoTask"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/ivEmpty" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_tasks_by_clicking_plus"
+        android:textSize="@dimen/sp_20"
+        android:gravity="center"
+        android:id="@+id/tvText"
+        style="@style/CustomLow"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoTask"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
