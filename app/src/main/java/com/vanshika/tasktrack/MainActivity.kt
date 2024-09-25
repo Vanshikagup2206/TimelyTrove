@@ -1,5 +1,6 @@
 package com.vanshika.tasktrack
 
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
 
         navController = findNavController(R.id.host)
        /* appBarConfiguration = navController?.graph?.let {
