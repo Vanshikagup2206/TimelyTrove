@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
        /* appBarConfiguration = navController?.graph?.let {
             AppBarConfiguration(it)
         }*/
-
         appBarConfiguration = AppBarConfiguration(setOf(R.id.mainFragment, R.id.calendarFragment, R.id.profileFragment, R.id.progressFragment, R.id.rewardAddedFragment))
         setupActionBarWithNavController(navController!!,appBarConfiguration!!)
         binding?.bottomNavigation?.setOnItemSelectedListener {

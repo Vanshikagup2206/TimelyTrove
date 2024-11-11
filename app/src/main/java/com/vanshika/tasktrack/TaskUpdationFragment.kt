@@ -71,12 +71,12 @@ class TaskUpdationFragment : Fragment() {
         }
         getTaskList()
         binding?.etDate?.setOnClickListener {
-            var datePickerDialog = DatePickerDialog(
+            val datePickerDialog = DatePickerDialog(
                 requireContext(), R.style.MyDatePickerStyle,
                 { _, year, month, date ->
                     startCalendar.set(year, month, date)
                     endCalendar.set(year, month, date)
-                    var formattedDate = simpleDateFormat.format(startCalendar.time)
+                    val formattedDate = simpleDateFormat.format(startCalendar.time)
                     binding?.etDate?.setText(formattedDate)
                 },
                 Calendar.getInstance().get(Calendar.YEAR),
@@ -138,17 +138,17 @@ class TaskUpdationFragment : Fragment() {
                     resources.getString(R.string.enter_category),
                     Toast.LENGTH_LONG
                 ).show()
-            } else if (binding?.etEnterTaskTitle?.text.toString().isNullOrEmpty()) {
+            } else if (binding?.etEnterTaskTitle?.text.toString().trim().isEmpty()) {
                 binding?.etEnterTaskTitle?.error =
                     resources.getString(R.string.enter_task_title)
-            } else if (binding?.etDate?.text.toString().isNullOrEmpty()) {
+            } else if (binding?.etDate?.text.toString().trim().isEmpty()) {
                 binding?.etDate?.error =
                     resources.getString(R.string.enter_date)
-            } else if (binding?.etStarts?.text.toString().isNullOrEmpty()) {
+            } else if (binding?.etStarts?.text.toString().trim().isEmpty()) {
                 binding?.etStarts?.error = resources.getString(R.string.enter_time)
-            } else if (binding?.etEnds?.text.toString().isNullOrEmpty()) {
+            } else if (binding?.etEnds?.text.toString().trim().isEmpty()) {
                 binding?.etEnds?.error = resources.getString(R.string.enter_time)
-            } else if (binding?.etDescription?.text.toString().isNullOrEmpty()) {
+            } else if (binding?.etDescription?.text.toString().trim().isEmpty()) {
                 binding?.etDescription?.error = resources.getString(R.string.enter_description)
             } else {
                 var color = if (binding?.rbGreen?.isChecked == true){
@@ -160,7 +160,7 @@ class TaskUpdationFragment : Fragment() {
                 }else{
                     0
                 }
-               var selecteditem=binding?.spCategory?.selectedItem as CategoryDataClass
+               val selectedItem=binding?.spCategory?.selectedItem as CategoryDataClass
                 tasksDatabase.tasksDao().updateTask(
                     TaskDataClass(
                         taskId = tasks,
@@ -169,8 +169,8 @@ class TaskUpdationFragment : Fragment() {
                         taskSubTask = binding?.etSubTasks?.text.toString(),
                         taskStartTime = startCalendar.time,
                         taskEndTime = endCalendar.time,
-                        categoryId = selecteditem.categoryId,
-                        categoryName = selecteditem.categoryName,
+                        categoryId = selectedItem.categoryId,
+                        categoryName = selectedItem.categoryName,
                         color = color
                     )
                 )
