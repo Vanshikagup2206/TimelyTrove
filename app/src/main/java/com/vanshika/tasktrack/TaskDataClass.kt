@@ -1,11 +1,7 @@
 package com.vanshika.tasktrack
 
-import android.app.ActivityManager.TaskDescription
 import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.ForeignKey.Companion.CASCADE
 import androidx.room.PrimaryKey
-import java.sql.Time
 import java.util.Calendar
 import java.util.Date
 
