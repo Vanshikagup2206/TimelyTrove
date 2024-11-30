@@ -73,7 +73,10 @@ class MainFragment : Fragment(), TaskClickInterface, CategoryClickInterface {
         binding?.fab?.setOnClickListener {
             findNavController().navigate(R.id.taskAdditionFragment)
         }
-        sharedPreferences = requireContext().getSharedPreferences(resources.getString(R.string.app_name),MODE_PRIVATE)
+        sharedPreferences = requireContext().getSharedPreferences(
+            resources.getString(R.string.app_name),
+            MODE_PRIVATE
+        )
 
     }
 
@@ -107,8 +110,10 @@ class MainFragment : Fragment(), TaskClickInterface, CategoryClickInterface {
         alertDialog.setTitle(resources.getString(R.string.are_you_sure_you_want_to_delete_this))
         alertDialog.setPositiveButton(resources.getString(R.string.yes)) { _, _ ->
             tasksDatabase.tasksDao().deleteTask(taskList[position])
+            if(taskList[position].isCompleted == true) {
+                subStars()
+            }
             getTaskList()
-            subStars()
         }
         alertDialog.setNegativeButton(resources.getString(R.string.no)) { _, _ ->
         }
@@ -147,11 +152,13 @@ class MainFragment : Fragment(), TaskClickInterface, CategoryClickInterface {
             adapter.notifyDataSetChanged()
         }
     }
+
     private fun addStars() {
         val currentStars = sharedPreferences.getInt("stars", 0)
         val newStarCount = currentStars + 10
         sharedPreferences.edit().putInt("stars", newStarCount).apply()
     }
+
     private fun subStars() {
         val currentStars = sharedPreferences.getInt("stars", 0)
         val newStarCount = currentStars - 10
