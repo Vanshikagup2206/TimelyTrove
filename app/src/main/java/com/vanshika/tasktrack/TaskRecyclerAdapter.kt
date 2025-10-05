@@ -59,7 +59,8 @@ class TaskRecyclerAdapter(
                 holder.cvTasks.setCardBackgroundColor(ContextCompat.getColor(context, R.color.pink))
         }
         holder.cbTask.setOnClickListener {
-            taskClickInterface.isCompleted(position = position, holder.cbTask.isChecked ?: false)
+            taskClickInterface.
+            isCompleted(position = position, holder.cbTask.isChecked ?: false)
         }
 
         holder.cbTask.isChecked = taskList[position].isCompleted ?: false
